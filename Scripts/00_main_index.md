@@ -1,8 +1,5 @@
 ---
 title: Homepage
-#write {
-  max-width: 800px; /*adjust writing area position*/
-}
 ---
 
 
