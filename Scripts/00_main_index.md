@@ -4,6 +4,10 @@ Welcome to my GitHub site! I use this site to store more technical elements of m
 
   * [The Networks of Occupations]: https://kenhoulin.github.io/The-Networks-of-Occupations/Figure-1.html
 
+  </br>
+
+  </br>
+
 - Past Projects
 
     
