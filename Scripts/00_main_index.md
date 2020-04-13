@@ -1,6 +1,8 @@
 ---
 title: Homepage
-
+#write {
+  max-width: 800px; /*adjust writing area position*/
+}
 ---
 
 
@@ -23,4 +25,4 @@ Welcome to my GitHub site! I use this site to store more technical elements of m
 
 ### Past Projects
 
-    
+​    
