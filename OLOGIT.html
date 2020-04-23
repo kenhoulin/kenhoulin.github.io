@@ -571,7 +571,7 @@ P=\frac{Odds}{1+Odds}
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">print</span>(above2_p)</a></code></pre></div>
 <pre><code>## Independent|Democrat 
 ##            0.3589757</code></pre>
-<p><em>Voila!</em> We are right! These probabilities are the blue+white area and the white area respectively. There’s nothing can stop us now!</p>
+<p><em>Voila!</em> We are right! These probabilities are the blue+white area and the white area respectively. Nothing can stop us now!</p>
 </div>
 <div id="cut-points-coefficients" class="section level2">
 <h2>Cut points + Coefficients</h2>
@@ -597,7 +597,7 @@ P=\frac{Odds}{1+Odds}
 ## Residual Deviance: 18627.49 
 ## AIC: 18637.49</code></pre>
 <ul>
-<li>Okay, we have White as our reference group, and one coefficient for Black, Latino, and Other respectively. We also have two cut points in the exact same place. It appears that all non-White groups are more likely to be on a higher category in contrast to a lower category. Let’s focus on the two cut points first. They are about the reference group: White.</li>
+<li>Okay, we have White as our reference group, and the coefficients for Black, Latino, and Other respectively. We also have two cut points. It appears that all non-White groups are more likely to be on a higher category in contrast to a lower category. Let’s focus on the two cut points first. They are about the reference group: White.</li>
 </ul>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1">whitecut1&lt;-olrace<span class="op">$</span>zeta[<span class="dv">1</span>] </a>
 <a class="sourceLine" id="cb20-2" title="2">whitecut2&lt;-olrace<span class="op">$</span>zeta[<span class="dv">2</span>]</a>
