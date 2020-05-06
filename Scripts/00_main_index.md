@@ -10,15 +10,13 @@ title: Homepage
 
   </br>
 
-Welcome to my GitHub site! I use this site to store more technical elements of my research projects.  You can find my projects below:
+Welcome to my GitHub site! I use this site to store more technical elements of my research projects.  This page is still under construction. 
 
 ### Active Projects
 
-- [The Networks of Occupations](https://kenhoulin.github.io/The-Networks-of-Occupations/Figure-1.html)
+</br>
 
-  </br>
-
-  </br>
+</br>
 
 ### Past Projects
 
