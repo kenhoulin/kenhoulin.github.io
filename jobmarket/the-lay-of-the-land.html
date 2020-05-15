@@ -1,0 +1,447 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>the-lay-of-the-land</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+html {
+	font-size: 19px;
+}
+
+html, body {
+	margin: auto;
+	background: #fefefe;
+}
+body {
+	font-family: "Vollkorn", Palatino, Times;
+	color: #333;
+	line-height: 1.4;
+	text-align: justify;
+}
+#write {
+	max-width: 960px;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	line-height: 1.53;
+	padding-top: 40px;
+}
+
+/* Typography
+-------------------------------------------------------- */
+
+#write>h1:first-child,
+h1 {
+	margin-top: 1.6em;
+	font-weight: normal;
+}
+
+h1 {
+	font-size:3em;
+}
+
+h2 {
+	margin-top:2em;
+	font-weight: normal;
+}
+
+h3 {
+	font-weight: normal;
+	font-style: italic;
+	margin-top: 3em;
+}
+
+h4 {
+	font-weight: normal;
+	margin-top: 3em;
+}
+
+h1, 
+h2, 
+h3,
+h4{
+	text-align: center;
+}
+
+h2:after{
+	border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+}
+
+h1+h2, h2+h3 {
+	margin-top: 0.83em;
+}
+
+p,
+.mathjax-block {
+	margin-top: 0;
+	-webkit-hypens: auto;
+	-moz-hypens: auto;
+	hyphens: auto;
+}
+ul {
+	list-style: square;
+	padding-left: 1.2em;
+}
+ol {
+	padding-left: 1.2em;
+}
+blockquote {
+	margin-left: 1em;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+}
+code,
+pre {
+	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+	font-size: .9em;
+	background: white;
+}
+.md-fences{
+	margin-left: 1em;
+	padding-left: 1em;
+	border: 1px solid #ddd;
+	padding-bottom: 8px;
+	padding-top: 6px;
+	margin-bottom: 1.5em;
+}
+
+a {
+	color: #2484c1;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+	border: none;
+}
+h1 a,
+h1 a:hover {
+	color: #333;
+	text-decoration: none;
+}
+hr {
+	color: #ddd;
+	height: 1px;
+	margin: 2em 0;
+	border-top: solid 1px #ddd;
+	border-bottom: none;
+	border-left: 0;
+	border-right: 0;
+}
+.ty-table-edit {
+	background: #ededed;
+    padding-top: 4px;
+}
+table {
+	margin-bottom: 1.333333rem
+}
+table th,
+table td {
+	padding: 8px;
+	line-height: 1.333333rem;
+	vertical-align: top;
+	border-top: 1px solid #ddd
+}
+table th {
+	font-weight: bold
+}
+table thead th {
+	vertical-align: bottom
+}
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0
+}
+table tbody+tbody {
+	border-top: 2px solid #ddd
+}
+
+.task-list{
+	padding:0;
+}
+
+.md-task-list-item {
+	padding-left: 1.6rem;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.33333333rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #fefefe;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
+}
+.md-tag {
+	color: inherit;
+	font: inherit;
+}
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+}
+#write pre.md-meta-block {
+	white-space: pre;
+	background: #f8f8f8;
+	border: 0px;
+	color: #999;
+	
+	width: 100vw;
+	max-width: calc(100% + 60px);
+	margin-left: -30px;
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+
+	margin-bottom: 2em;
+	margin-top: -1.3333333333333rem;
+	padding-top: 26px;
+	padding-bottom: 10px;
+	line-height: 1.8em;
+	font-size: 0.9em;
+	font-size: 0.76em;
+	padding-left: 0;
+}
+.md-img-error.md-image>.md-meta{
+	vertical-align: bottom;
+}
+#write>h5.md-focus:before {
+	top: 2px;
+}
+
+.md-toc {
+	margin-top: 40px;
+}
+
+.md-toc-content {
+	padding-bottom: 20px;
+}
+
+.outline-expander:before {
+	color: inherit;
+	font-size: 14px;
+	top: auto;
+	content: "\f0da";
+	font-family: FontAwesome;
+}
+
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  	content: "\f0d7";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.html-for-mac #typora-sidebar {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.typora-node .file-list-item-parent-loc, 
+.typora-node .file-list-item-time, 
+.typora-node .file-list-item-summary {
+	font-family: arial, sans-serif;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: calc(1rem - 12px);
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.md-fences .code-tooltip {
+	bottom: -2em !important;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><p><strong><span>The Lay of the Land</span></strong></p><p><span>I want to start by stating the obvious: it will be rough to land a position in the next few years. The overall impact of COVID19 is still not very clear but all universities and colleges are cutting their budgets at this moment so there are unlikely to be many jobs this year. Even if we have a V-shape recovery and everything just goes back to normal in 2021, the competition will still be harsh due to the back log.  </span></p><p><span>The whole situation makes it even more important to be </span><strong><span>strategic</span></strong><span> about what you do in the next couple of years. Even if you can&#39;t find a job this year, I don&#39;t think it&#39;s a bad idea for you to start planning around it. For those who are committed to pursue an academic career, it&#39;s important for you to make sure that your portfolio will look stronger next year than this year. For those who are not sure, you should start exploring what you should do to open up other opportunities. You should start to factor in </span><strong><span>how this will impact your job prospect</span></strong><span> for any decision you make from this point forward.</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n267"><a class="md-toc-inner" href="#types-of-jobs">Types of Jobs</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n231"><a class="md-toc-inner" href="#where-to-find-academic-jobs">Where to Find Academic Jobs?</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n120"><a class="md-toc-inner" href="#apply-apply-apply">Apply, Apply, Apply</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n195"><a class="md-toc-inner" href="#materials">Materials</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n281"><a class="md-toc-inner" href="#dont-be-shy">Don't Be Shy</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n140"><a class="md-toc-inner" href="#the-should-i-questions">The "Should I..." Questions</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n110"><a class="md-toc-inner" href="#cv">CV</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n165"><a class="md-toc-inner" href="#publications">Publications</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n116"><a class="md-toc-inner" href="#assignment">Assignment</a></span></p></div><h2><a name="types-of-jobs" class="md-header-anchor"></a><span>Types of Jobs</span></h2><p><span>I am not here to encourage you to consider one type of jobs over another type. You know yourself better than I do. However, I do encourage you to be as </span><strong><span>informed</span></strong><span> and as </span><strong><span>open-minded</span></strong><span> as you can. There is usually not only one way to achieve your ultimate goal. Since my knowledge is limited, the workshop will largely focus on the academic job markets. Below, I will talk about research jobs, teaching jobs, and private-sector jobs. Usually you start to see the advertisements for research jobs during the summer until November. Teaching jobs appear later in the cycle.</span></p><p><span>I do not think it&#39;s healthy to think of these three types of jobs hierarchically. As discussed below, one type of jobs is not necessarily better than the other and each requires different records and skill sets.</span></p><p><em><span>Research Academic Jobs</span></em></p><p><span>Most students are interested in so-called R1 jobs, which can be roughly defined as tenure-tracked jobs in a department with a PhD program, higher research demand, and lower teaching demand. This is the type of jobs that you&#39;re familiar with and they are indeed pretty good jobs if you&#39;re a consistently productive researchers. As a graduate program, we aim to produce as many R1 placements as we can and this is one reason I am doing this workshop.</span></p><p><span>The only thing that worries me is that many students do not have a realistic understanding of how competitive they are for this job market. It&#39;s not about the prestige of your degree. It&#39;s not about your advisor. It&#39;s not about whether you have publication. It&#39;s about how you look </span><strong><span>in comparison</span></strong><span> to other candidates. Thus, it is important for you to get a sense of whom you&#39;re competing with for what kind of jobs.</span></p><p><span>Of course, there is not a database for you to analyze the CVs of all graduate students on the job market and what types of jobs they are applying for. That said, you can still go to places like the </span><a href='https://www.socjobrumors.com/wiki.php'><span>Job Market Rumor</span></a><span> to see what kinds of candidates were invited for what types of jobs. You can also look up the CVs of people who are recently hired on various departmental websites. Yes, I know this is selecting on the dependent variable and many people who have similar CVs may not get the invitation or the offer. But it tells you what&#39;s the </span><strong><span>minimum</span></strong><span> requirement for someone to be considered. Work your way to meet or beat these requirements. Wishful thinking is a form of self harm.</span></p><p><em><span>Teaching Academic Jobs</span></em></p><p><span>Being in a research institution, it is normal for us to underrate teaching jobs. These jobs in general pay less and require more teaching. However, I think it&#39;s just plain stupid to think these jobs are in any way bad or jobs for &quot;losers.&quot; They often come with a decent salary for a middle-class lifestyle, high job security, and good benefits. There&#39;s less pressure to produce publications and you may have more work-life balance, depending on how important it is to you. Yes, these jobs have lower &quot;status&quot; but honestly there are may be only 2,000 out of 3.2 millions people in the United States care about whether your department is highly ranked. </span><strong><span>A cupcake is a cupcake even when the icing is not as fancy</span></strong><span>. </span></p><p><span>That said, I do not want to give you the impression that these jobs are easier to get. There are graduate students who are very invested in teaching and have build a record for it. They teach their courses, have great evaluation, and won some teaching awards. In programs like Indiana,   they have an entire teaching track for PhD students. The faculty members at teaching institutions also don&#39;t like to be thought of as the safety options. </span></p><p><span>My recommendation is still the same: you should do some research on what the CVs look for this type of jobs. You should also try to make connection at the conferences as you&#39;re approaching the job market. It will be much easier to arrange a meeting with people at teaching institutions than those at research institutions. Social ties, I believe, are also more important for landing this type of jobs.</span></p><p><span>It should be noted that many supposedly teaching institutions do care about research outputs. As it becomes more difficult to find a research job, the faculty members in teaching institutions often have a pretty good research record. It&#39;s also important to think about how you can combine your research and teaching.</span></p><p><em><span>Private/Tech Jobs</span></em></p><p><span>It is entirely a different world that I know little about, and honestly, it would be silly to provide any general advice to a very heterogeneous set of jobs. But a number of our students have been successful in finding jobs in the private sector. </span></p><p><span>I have been in academia long enough to see a few PhDs. have a successful career and a fulfilling life outside of academia. Do not let the tunnel vision you acquired in the past 5-7 years limits what you can do in the next 50 years. There are a few clear advantages with private-sector jobs. They can come with a pretty high starting salary </span><strong><span>if you have the right skill sets</span></strong><span>. Sometimes even higher than those at top academic institutions. There&#39;s a clearer boundary between work and other parts of life. There may be less stress. There&#39;re more options in terms of location. The downside is that you may not have as much autonomy and flexibility with your time. These things are more important to some people than to others.</span></p><p><span>Some general principles still apply when you&#39;re looking for a private-sector job. You need to figure out how to be competitive in the market. You need to know what skills are rare and in-demand. Create a LinkedIn account. You need to get out of the bubble and start talking to people who know about the market. You will have to do most of the work here since the graduate program is not designed to provide training for this market.</span></p><p><span>We may invite the alumni who work in the private sector to come back and do some talks in the winter or spring if this is an option our students are interested in pursuing. The obvious resource you should look into is the </span><a href='https://versatilephd.com/'><span>Versatile PhD</span></a><span>.</span></p><h2><a name="where-to-find-academic-jobs" class="md-header-anchor"></a><span>Where to Find Academic Jobs?</span></h2><p><span>ASA maintains a job bank and you should subscribe to it. The Sociology Job Rumor website linked above also has some job information. You definitely don&#39;t want to miss any opening.</span></p><p><span>Job ads are also circulated through ASA section mailing list. Join all the sections that are relevant to your research areas so you don&#39;t miss out on those.</span></p><p><span>Let people know that you&#39;re looking for a job so they can forward relevant information to you (more below).</span></p><p><span>Look outside of sociology, as there are also jobs in Public Policy, International Relation, Education, Gender Studies, Criminal Justice... etc.  </span><a href='https://chroniclevitae.com/job_search/new'><span>ChronicleVitae</span></a><span> is one place you find additional jobs. Let me know if there are other resources.</span></p><h2><a name="apply-apply-apply" class="md-header-anchor"></a><span>Apply, Apply, Apply</span></h2><p><span>No matter what types of jobs you&#39;re interested in, I encourage you to apply to as many jobs as you can even when some positions do not look immediately appealing to you. The truth is that you have very limited information at judging whether it is actually a good position and your imagination may not reflect the reality. No matter what your record is, it is silly to start believing that you are too good for certain jobs. Even in the situation that you know for sure you will never take that job, it still could provide an opportunity for you to practice your job talk and interview skills. </span><strong><span>Do not reject the offer you don&#39;t have</span></strong><span>. Give yourself the opportunity to change your mind. Maybe you will think differently after visiting the campus.</span></p><p><span>One reason you should apply more is that sending an application out is very low cost. Often it&#39;s just a few clicks away and takes no more than 15 minutes. Don&#39;t think any single application as more meaningful than swiping right on a dating app. More likely than not you won&#39;t receive an invitation. Just forget about until the rare situation that you receive a phone call.</span></p><p><span>Another reason you should go all in is that </span><strong><span>you can always walk away</span></strong><span> when you have better options. There is nothing stopping you. If you have too many job interviews, you can decide what to cancel. If you have multiple offers, pick the one you like the most. Even after you sign the contract, you can still look for another job next year. Your preferences do not matter until you have </span><em><span>real</span></em><span> options, not </span><em><span>fantasy</span></em><span> options. </span></p><h2><a name="materials" class="md-header-anchor"></a><span>Materials</span></h2><p><span>You will need the following documents for the academic job market:</span></p><ul><li><span>CV</span></li><li><span>Cover Letter</span></li><li><span>Research Statement (not required by all institutions)</span></li><li><span>Teaching Statement</span></li><li><span>Letters</span></li></ul><p><span>We will cover the first four and you&#39;re responsible to start talking with your advisors if you plan to go on the market this year. It is very important to strategize with your advisor about what you should do. This workshop is a pill, not a meal. </span></p><h2><a name="dont-be-shy" class="md-header-anchor"></a><span>Don&#39;t Be Shy</span></h2><p><span>If you&#39;re looking for a job, people should know about it. There&#39;s no reason to hide it. Everyone knows that it&#39;s tough to get a job so there&#39;s no shame if you can&#39;t find one. The more people know you&#39;re looking for a job, the more people can help you find one. If you have a record that is competitive for the type of jobs you&#39;re looking for, you should let people know you&#39;re searching.</span></p><p><span>Don&#39;t be a lone wolf in this process. Talk to your advisors, talk to your friends, talk to other people who are also looking for a job </span><strong><span>throughout the process</span></strong><span>. A network search is always more effective than an individual search. Be transparent so people can help you.</span></p><h2><a name="the-should-i-questions" class="md-header-anchor"></a><span>The &quot;Should I...&quot; Questions</span></h2><p><span>There will be many &quot;Should I...&quot; questions when preparing for the job market. Should I customize my letters? Should I make a website? Should I try to make contact with people? </span><strong><span>My answer will always be yes if it will not reduce your research productivity and no if it will.</span></strong></p><p><span>If you do not have a competitive record for the type of jobs you want, you should focus all your time on building it so you will be more competitive in the future. If you do, you have the luxury and capital to do think about other ways to improve your prospect. If you don&#39;t have compelling content, you will just have a website highlighting that and some pretty pictures. If you don&#39;t have multiple publications, there&#39;s not a choice of which area of research to highlight in your letters. If you do not have a competitive application, people will still talk to you but feel sorry that no one mentors you properly about looking for a job.</span></p><p><span>Sometimes these &quot;Should I&quot; questions are simply avoidance to do the hard work of building a competitive record. I would go as far to say that preparing job market materials may not be the best idea for you if you don&#39;t have a competitive record. </span></p><p><span>In general, be mindful about the potential payout for the time you invest in certain activities. I do not think it makes much sense to customize your letter for each position, as the effect of doing so is likely to be very small. However, in some situations it may make sense to do so. </span></p><h2><a name="cv" class="md-header-anchor"></a><span>CV</span></h2><p><span>If you follow my advice and look up many CVs on the internet, you should have a good sense of what a competitive CV should look like for the types of jobs you want. Identify your strengths and weaknesses as these will be on the committee&#39;s mind when they read your cover letter. </span></p><p><span>Your CV should be clear and highlight the records you want people to see. It doesn&#39;t have to look &quot;pretty&quot; especially when there&#39;s not much content. Don&#39;t spend forever to design it. Don&#39;t cramp it with minor achievements so it is longer. Think about what the committees are searching for, which will vary by the type of positions.</span></p><p><span>For research jobs, you should definitely highlight your publications and awards/grants. I would expect the candidate to have their publications in the first page and a pipeline of working papers. Only mention the journal in your CV when the paper receives at least an R&amp;R. You can talk about where you plan to send other papers to in your cover letter or research statement, knowing that it may mean little to the committee.</span></p><p><span>The resumes for private-sector jobs look very different from academic CVs. They are usually shorter and with more description. Please find some examples and do not just send out your academic CV.</span></p><h2><a name="publications" class="md-header-anchor"></a><span>Publications</span></h2><p><span>I like to think of different journals as different </span><strong><span>currencies</span></strong><span>. Some journals are universally valued, while others are valued only in specific places. You need to have a sense of how different journals are valued differently in different places. Journals that are valued at UT or by your advisors are not necessarily as valued in other institutions or by other researchers. Sociology is a big-tent discipline and this is what we have to deal with.</span></p><p><span>There is no doubt that some journals are more universally valued by sociology departments, just like some currencies are accepted everywhere while others are not valued. There is </span><a href='https://scatter.wordpress.com/2020/01/29/devilish-details-a-reputational-ranking-of-generalist-and-specialist-sociology-journals/'><span>a recent study</span></a><span> that ranks sociology journals, which will give you a sense of which currencies are accepted in sociology departments and which currencies are more in demand. </span></p><p><span>This is why I always encourage students to learn how to publish in top general journals because they are the most valued currencies. To be clear, it is not easy to do and requires a lot of learning. Many tried but did not succeed. However, it is always easier to move down to a specialty journal than move up to a top general journal when a paper is rejected. What worries me most is that students get used to only write short, simple papers for specialty journal. Many graduated without knowing how to write for top general journals. If you already have one or two single or first-author papers, I would encourage you to invest in publishing in top general journals. </span></p><p><span>That said, I want to emphasize that evaluation is still a </span><strong><span>local</span></strong><span> process. It means that how impressive your publication record looks will depend on where and by whom it is evaluated. Your publications should certainly be relevant to the hiring area. </span></p><p><span>In short, it&#39;s not about whether you have any publication or not but where you publish your work. You should start thinking about how your publication may be evaluated in different places. If you don&#39;t have any publication, you should also think about </span><strong><span>how</span></strong><span> to publish in the right journals for the types of job you want.</span></p><h2><a name="assignment" class="md-header-anchor"></a><span>Assignment</span></h2><ul><li><p><span>Do the readings. </span></p></li><li><p><span>Go to the </span><a href='https://www.socjobrumors.com/wiki.php'><span>Job Market Rumor</span></a><span> and find 10-15 CVs of people who were invited for a campus interview. Focus on the type of institutions or areas you are interested in.</span></p></li><li><p><strong><span>Analyze</span></strong><span> these CVs carefully. Compare them with your own CVs.</span></p><ul><li><span>Identify your strengths in comparison with other CVs.</span></li><li><span>Identify the areas you need to strengthen so your record will be more competitive next year.</span></li></ul></li><li><p><strong><span>Upload</span></strong><span> your CV.</span></p></li><li><p><strong><span>Comment</span></strong><span> on other people&#39;s CVs. Tell them what are impressive, what is lacking, and what is confusing.</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>
