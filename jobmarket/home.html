@@ -31,7 +31,7 @@ input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px;
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
 p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
@@ -82,7 +82,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   html.blink-to-pdf { font-size: 13px; }
@@ -93,6 +93,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 a img, img a { cursor: pointer; }
 pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
@@ -167,12 +168,19 @@ body {
 	line-height: 1.4;
 	text-align: justify;
 }
+
 #write {
 	max-width: 960px;
 	margin: 0 auto;
 	margin-bottom: 2em;
 	line-height: 1.53;
 	padding-top: 40px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
 }
 
 /* Typography
@@ -199,15 +207,9 @@ h3 {
 	margin-top: 3em;
 }
 
-h4 {
-	font-weight: normal;
-	margin-top: 3em;
-}
-
 h1, 
 h2, 
-h3,
-h4{
+h3{
 	text-align: center;
 }
 
@@ -442,6 +444,6 @@ table tbody+tbody {
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h2><a name="ut-job-market-workshop" class="md-header-anchor"></a><span>UT Job Market Workshop</span></h2><p><span>Here you can find all the information about the job market workshop. Please bookmark this page. Existing pages will be updated and new pages will be added over the summer. Please do not hesitate to email me if you think there are ways these pages can be improved. Your contribution will benefit current and future participants.</span></p><p>&nbsp;</p><ul><li><a href='https://kenhoulin.github.io/jobmarket/overview.html'><span>Overview</span></a><span>: Here you can find a brief description of the workshop.</span></li><li><a href='https://kenhoulin.github.io/jobmarket/game-plan.html'><span>Game Plan</span></a><span>: Here you can find the plan and the schedule of the meetings.</span></li><li><a href='https://kenhoulin.github.io/jobmarket/the-lay-of-the-land.html'><span>The Lay of the Land</span></a><span>: Here I provide some general advise about looking for a job.</span></li><li><span>Cover Letter</span></li><li><span>Research Statement</span></li><li><span>Teaching Statement</span></li><li><span>Mock Interviews</span></li></ul><p>&nbsp;</p><p>&nbsp;</p></div>
+<div  id='write'  class = 'is-node'><h2><a name="ut-job-market-workshop" class="md-header-anchor"></a><span>UT Job Market Workshop</span></h2><p><span>Here you can find all the information about the job market workshop. Please bookmark this page. Existing pages will be updated and new pages will be added over the summer. Please do not hesitate to email me if you think there are ways these pages can be improved. Your contribution will benefit current and future participants.</span></p><p>&nbsp;</p><ul><li><a href='https://kenhoulin.github.io/jobmarket/overview.html'><span>Overview</span></a><span>: Here you can find a brief description of the workshop.</span></li><li><a href='https://kenhoulin.github.io/jobmarket/game-plan.html'><span>Game Plan</span></a><span>: Here you can find the plan and the schedule of the meetings.</span></li><li><a href='https://kenhoulin.github.io/jobmarket/the-lay-of-the-land.html'><span>The Lay of the Land</span></a><span>: Here I provide some general advise about looking for a job.</span></li><li><a href='https://kenhoulin.github.io/jobmarket/cover-letter.html'><span>Cover Letter</span></a><span>: Here I discuss the principles of writing an effective cover letter.</span></li><li><span>Research Statement</span></li><li><span>Teaching Statement</span></li><li><span>Mock Interviews</span></li></ul><p>&nbsp;</p><p>&nbsp;</p></div>
 </body>
 </html>
